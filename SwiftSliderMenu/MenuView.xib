@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MenuView" customModule="SwiftSlideMenu" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="293" height="569"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="yxv-BP-6C2">
+                    <rect key="frame" x="0.0" y="0.0" width="293" height="120"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SliderMenu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qn-gK-Aif">
+                            <rect key="frame" x="103" y="50" width="86.5" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.1333333333" green="0.53333333329999999" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="DAc-jl-KSK"/>
+                        <constraint firstItem="3qn-gK-Aif" firstAttribute="centerY" secondItem="yxv-BP-6C2" secondAttribute="centerY" id="MPr-Rc-0fQ"/>
+                        <constraint firstItem="3qn-gK-Aif" firstAttribute="centerX" secondItem="yxv-BP-6C2" secondAttribute="centerX" id="gGh-8T-r2r"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="TSo-vz-UTf">
+                    <rect key="frame" x="0.0" y="120" width="293" height="449"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <color key="sectionIndexBackgroundColor" red="0.1685458742" green="0.32238673750000002" blue="0.46931009460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="ahc-q3-RZ1"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="K2R-27-N4N"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="yxv-BP-6C2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="58v-kC-5em"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="yxv-BP-6C2" secondAttribute="trailing" id="7Jl-ba-MBe"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="TSo-vz-UTf" secondAttribute="bottom" id="EgC-e4-ese"/>
+                <constraint firstItem="TSo-vz-UTf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Fha-KJ-EdZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="TSo-vz-UTf" secondAttribute="trailing" id="VvP-Bz-sFu"/>
+                <constraint firstItem="TSo-vz-UTf" firstAttribute="top" secondItem="yxv-BP-6C2" secondAttribute="bottom" id="f7m-KH-aWW"/>
+                <constraint firstItem="yxv-BP-6C2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="fv3-Df-sJ3"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="tableView" destination="TSo-vz-UTf" id="dtH-Ou-5b0"/>
+            </connections>
+            <point key="canvasLocation" x="-6.5" y="4.5"/>
+        </view>
+    </objects>
+</document>
